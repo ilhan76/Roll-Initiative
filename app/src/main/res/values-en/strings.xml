@@ -1,0 +1,17 @@
+<resources>
+    <string name="aberration">Aberration</string>
+    <string name="beast">Beast</string>
+    <string name="celestial">Celestial</string>
+    <string name="construct">Construct</string>
+    <string name="dragon">Dragon</string>
+    <string name="elemental">Elemental</string>
+    <string name="fairy">Fairy</string>
+    <string name="fiend">Fiend</string>
+    <string name="giant">Giant</string>
+    <string name="humanoid">Humanoid</string>
+    <string name="monster">Monster</string>
+    <string name="plant">Plant</string>
+    <string name="undead">Undead</string>
+    <string name="slime">Slime</string>
+    <string name="pack_of_tiny_beasts">Pack of tiny beasts</string>
+</resources>

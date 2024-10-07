@@ -4,7 +4,7 @@ data class CharacterSimple(
     override val id: Int,
     override val name: String,
     override val size: Size,
-    override val type: Type,
+    override val type: CreatureType,
     override val armorClass: Int,
     override val comment: String,
     val maxHp: Int,

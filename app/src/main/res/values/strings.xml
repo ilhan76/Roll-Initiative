@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Roll Initiative</string>
+    
+    <string name="aberration">Аберрация</string>
+    <string name="beast">Зверь</string>
+    <string name="celestial">Небожитель</string>
+    <string name="construct">Конструкт</string>
+    <string name="dragon">Дракон</string>
+    <string name="elemental">Элементаль</string>
+    <string name="fairy">Фея</string>
+    <string name="fiend">Исчадие</string>
+    <string name="giant">Великан</string>
+    <string name="humanoid">Гуманоид</string>
+    <string name="monster">Монстр</string>
+    <string name="plant">Растение</string>
+    <string name="undead">Нежить</string>
+    <string name="slime">Слизь</string>
+    <string name="pack_of_tiny_beasts">Стая крошечных зверей</string>
 </resources>
