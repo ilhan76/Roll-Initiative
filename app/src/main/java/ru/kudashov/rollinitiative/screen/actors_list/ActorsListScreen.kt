@@ -18,8 +18,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,6 +32,8 @@ import ru.kudashov.rollinitiative.domain.character.CreatureType
 import ru.kudashov.rollinitiative.domain.character.getNameResource
 import ru.kudashov.rollinitiative.screen.actors_list.data.ActorUi
 import ru.kudashov.rollinitiative.ui.element.Search
+import ru.kudashov.rollinitiative.ui.icons.Add
+import ru.kudashov.rollinitiative.ui.theme.UiKitIcons
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 import ru.surfstudio.mvi.vm.compose.renders
 
@@ -106,7 +106,7 @@ private fun ScreenContent(
         ) {
             Icon(
                 modifier = Modifier.size(32.dp),
-                imageVector = Icons.Default.Add,
+                imageVector = UiKitIcons.Add,
                 tint = UiKitTheme.colors.primary,
                 contentDescription = null
             )

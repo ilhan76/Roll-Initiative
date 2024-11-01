@@ -3,8 +3,11 @@ package ru.kudashov.rollinitiative.ui.theme.component
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.toFontFamily
 import androidx.compose.ui.unit.sp
+import ru.kudashov.rollinitiative.R
 
 @Immutable
 data class UiKitTypography(
@@ -34,55 +37,65 @@ private fun createUiKitTypography(): UiKitTypography {
             fontSize = 24.sp,
             lineHeight = 28.sp,
             fontWeight = FontWeight(400),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
             letterSpacing = 0.1.sp
         ),
         header2 = TextStyle(
             fontSize = 20.sp,
             lineHeight = 24.sp,
-            fontWeight = FontWeight(400)
+            fontWeight = FontWeight(400),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
         button = TextStyle(
             fontSize = 18.sp,
             lineHeight = 22.sp,
             fontWeight = FontWeight(400),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
             letterSpacing = 0.1.sp
         ),
         button2 = TextStyle(
             fontSize = 13.sp,
             lineHeight = 16.sp,
             fontWeight = FontWeight(400),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
             letterSpacing = 0.1.sp
         ),
         subtitle1 = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
             fontWeight = FontWeight(400),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
             letterSpacing = 0.3.sp
         ),
         subtitle2 = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontWeight = FontWeight(600)
+            fontWeight = FontWeight(600),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
         body1 = TextStyle(
             fontSize = 14.sp,
             lineHeight = 18.sp,
-            fontWeight = FontWeight(400)
+            fontWeight = FontWeight(400),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
         body2 = TextStyle(
             fontSize = 14.sp,
             lineHeight = 18.sp,
-            fontWeight = FontWeight(500)
+            fontWeight = FontWeight(500),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
         caption1 = TextStyle(
             fontSize = 12.sp,
             lineHeight = 16.sp,
-            fontWeight = FontWeight(400)
+            fontWeight = FontWeight(400),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
         caption2 = TextStyle(
             fontSize = 12.sp,
             lineHeight = 16.sp,
-            fontWeight = FontWeight(500)
+            fontWeight = FontWeight(500),
+            fontFamily = Font(R.font.inter_regular).toFontFamily(),
         )
     )
 }
