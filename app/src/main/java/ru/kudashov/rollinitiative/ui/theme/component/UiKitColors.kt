@@ -8,13 +8,12 @@ import androidx.compose.ui.graphics.Color
 data class UiKitColors(
     val primary: Color,
     val secondary: Color,
-    val tertiary: Color,
     val textColorPrimary: Color,
     val textColorSecondary: Color,
-    val textColorTertiary: Color,
     val background: Color,
     val error: Color,
     val success: Color,
+    val transparent: Color
 )
 
 private var colors: UiKitColors? = null
@@ -27,28 +26,26 @@ fun getUiKitColorsDark(): UiKitColors = colorsDark ?: createUiKitColorsDark().al
 
 private fun createUiKitColors(): UiKitColors {
     return UiKitColors(
-        primary = Color(0xffefa11f),
-        secondary = Color(0xFFebe7d9),
-        tertiary = Color(0xFFe4e2dd),
-        textColorPrimary = Color(0xFFFFFFFF),
-        textColorSecondary = Color(0xFF042a12),
-        textColorTertiary = Color(0xFF6d6d6c),
-        background = Color(0xFFf8f6f0),
+        primary = Color(0xFFE8E2D2),
+        secondary = Color(0xFFFFA344),
+        textColorPrimary = Color(0xFF172C0F),
+        textColorSecondary = Color(0x80172C0F),
+        background = Color(0xFFF8F6F0),
         error = Color(0xFFFF3B30),
         success = Color(0xFF22B447),
+        transparent = Color(0x00000000),
     )
 }
 
 private fun createUiKitColorsDark(): UiKitColors {
     return UiKitColors(
-        primary = Color(0xffad7924),
-        secondary = Color(0xFF171f25),
-        tertiary = Color(0xFF1e272b),
-        textColorPrimary = Color(0xFFb5b8b9),
-        textColorSecondary = Color(0xFFb5b8b9),
-        textColorTertiary = Color(0xFF727677),
-        background = Color(0xFF121a20),
+        primary = Color(0xFFFAE9D5),
+        secondary = Color(0xFF5F2015),
+        textColorPrimary = Color(0xFF251007),
+        textColorSecondary = Color(0x80251007),
+        background = Color(0xFF6F6059),
         error = Color(0xFFFF3B30),
         success = Color(0xFF22B447),
+        transparent = Color(0x00000000),
     )
 }

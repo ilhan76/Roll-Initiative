@@ -6,8 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -16,6 +15,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import ru.kudashov.rollinitiative.ui.icons.Search
+import ru.kudashov.rollinitiative.ui.theme.UiKitIcons
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 
 @Composable
@@ -29,31 +30,33 @@ fun Search(
         onValueChange = onValueChange,
         textStyle = UiKitTheme.typography.subtitle1,
         colors = OutlinedTextFieldDefaults.colors().copy(
-            focusedTextColor = UiKitTheme.colors.textColorSecondary,
-            unfocusedTextColor = UiKitTheme.colors.textColorSecondary,
-            focusedContainerColor = UiKitTheme.colors.secondary,
-            unfocusedContainerColor = UiKitTheme.colors.secondary,
-            unfocusedIndicatorColor = UiKitTheme.colors.tertiary,
-            focusedIndicatorColor = UiKitTheme.colors.primary,
+            focusedTextColor = UiKitTheme.colors.textColorPrimary,
+            unfocusedTextColor = UiKitTheme.colors.textColorPrimary,
+            focusedContainerColor = UiKitTheme.colors.primary,
+            unfocusedContainerColor = UiKitTheme.colors.primary,
+            unfocusedIndicatorColor = UiKitTheme.colors.primary,
+            focusedIndicatorColor = UiKitTheme.colors.secondary,
         ),
         singleLine = true,
         leadingIcon = {
             Icon(
-                imageVector = Icons.Default.Search,
-                tint = UiKitTheme.colors.textColorTertiary,
-                contentDescription = null
+                imageVector = UiKitIcons.Search,
+                tint = UiKitTheme.colors.textColorSecondary,
+                contentDescription = null,
+                modifier = Modifier.padding(start = UiKitTheme.spacings.medium)
             )
         },
         placeholder = {
             Text(
                 text = "Let's find some beast",
                 style = UiKitTheme.typography.subtitle1,
-                color = UiKitTheme.colors.textColorTertiary
+                color = UiKitTheme.colors.textColorSecondary
             )
         },
+        shape = RoundedCornerShape(15.dp),
         modifier = modifier
             .fillMaxWidth()
-            .height(50.dp)
+            .height(54.dp)
     )
 }
 

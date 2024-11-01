@@ -62,7 +62,7 @@ private fun createUiKitTypography(): UiKitTypography {
         subtitle2 = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontWeight = FontWeight(500)
+            fontWeight = FontWeight(600)
         ),
         body1 = TextStyle(
             fontSize = 14.sp,

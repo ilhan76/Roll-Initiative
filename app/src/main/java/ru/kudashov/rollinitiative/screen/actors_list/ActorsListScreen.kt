@@ -23,6 +23,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -62,8 +63,8 @@ private fun ScreenContent(
         modifier
             .background(color = UiKitTheme.colors.background)
             .padding(
-                horizontal = UiKitTheme.spacings.large,
-                vertical = UiKitTheme.spacings.small
+                horizontal = UiKitTheme.spacings.xLarge,
+                vertical = UiKitTheme.spacings.xxLarge
             )
     ) {
         Column {
@@ -91,9 +92,9 @@ private fun ScreenContent(
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier
-                .size(50.dp)
+                .size(72.dp)
                 .background(
-                    UiKitTheme.colors.primary,
+                    UiKitTheme.colors.secondary,
                     shape = CircleShape
                 )
                 .align(Alignment.BottomEnd)
@@ -102,7 +103,7 @@ private fun ScreenContent(
             Icon(
                 modifier = Modifier.size(32.dp),
                 imageVector = Icons.Default.Add,
-                tint = UiKitTheme.colors.textColorPrimary,
+                tint = UiKitTheme.colors.primary,
                 contentDescription = null
             )
         }
@@ -119,8 +120,8 @@ fun ActorItem(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .background(
-                color = UiKitTheme.colors.secondary,
-                shape = RoundedCornerShape(10.dp)
+                color = UiKitTheme.colors.primary,
+                shape = RoundedCornerShape(15.dp)
             )
             .fillMaxWidth()
             .clickable(onClick = onClick)
@@ -132,7 +133,7 @@ fun ActorItem(
                 .size(45.dp)
                 .background(
                     shape = CircleShape,
-                    color = UiKitTheme.colors.primary,
+                    color = Color(0xFF3E3530),
                 )
         )
         Column(
@@ -143,12 +144,12 @@ fun ActorItem(
             Text(
                 text = actorUi.name,
                 style = UiKitTheme.typography.subtitle2,
-                color = UiKitTheme.colors.textColorSecondary
+                color = UiKitTheme.colors.textColorPrimary
             )
             Text(
                 text = stringResource(actorUi.type.getNameResource()),
                 style = UiKitTheme.typography.caption1,
-                color = UiKitTheme.colors.textColorTertiary
+                color = UiKitTheme.colors.textColorSecondary
             )
         }
     }
