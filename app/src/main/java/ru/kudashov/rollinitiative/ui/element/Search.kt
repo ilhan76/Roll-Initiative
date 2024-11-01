@@ -35,7 +35,7 @@ fun Search(
             focusedContainerColor = UiKitTheme.colors.primary,
             unfocusedContainerColor = UiKitTheme.colors.primary,
             unfocusedIndicatorColor = UiKitTheme.colors.primary,
-            focusedIndicatorColor = UiKitTheme.colors.secondary,
+            focusedIndicatorColor = UiKitTheme.colors.primary,
         ),
         singleLine = true,
         leadingIcon = {
