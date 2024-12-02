@@ -1,4 +1,4 @@
-package ru.kudashov.rollinitiative.domain
+package ru.kudashov.rollinitiative.domain.model
 
 enum class Dice(val value: Int) {
     D4(4),

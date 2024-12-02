@@ -1,6 +1,4 @@
-package ru.kudashov.rollinitiative.domain.character
-
-import ru.kudashov.rollinitiative.domain.DamageType
+package ru.kudashov.rollinitiative.domain.model.character
 
 data class CharacterExtended(
     override val id: Int,

@@ -1,4 +1,4 @@
-package ru.kudashov.rollinitiative.domain.character
+package ru.kudashov.rollinitiative.domain.model.character
 
 data class CharacterSimple(
     override val id: Int,
@@ -8,7 +8,6 @@ data class CharacterSimple(
     override val armorClass: Int,
     override val comment: String,
     val maxHp: Int,
-    val speed: Int,
 ) : Character() {
 
     override fun getHP() = maxHp

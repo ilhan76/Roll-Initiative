@@ -1,4 +1,4 @@
-package ru.kudashov.rollinitiative.domain.character
+package ru.kudashov.rollinitiative.domain.model.character
 
 enum class Characteristic {
     Strength,

@@ -1,4 +1,4 @@
-package ru.kudashov.rollinitiative.domain.character
+package ru.kudashov.rollinitiative.domain.model.character
 
 data class Speed(
     val running: Int? = null,

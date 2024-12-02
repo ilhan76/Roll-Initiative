@@ -28,8 +28,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import ru.kudashov.rollinitiative.domain.character.CreatureType
-import ru.kudashov.rollinitiative.domain.character.getNameResource
+import ru.kudashov.rollinitiative.domain.model.character.CreatureType
+import ru.kudashov.rollinitiative.domain.model.character.getNameResource
 import ru.kudashov.rollinitiative.screen.actors_list.data.ActorUi
 import ru.kudashov.rollinitiative.ui.element.Search
 import ru.kudashov.rollinitiative.ui.icons.Add

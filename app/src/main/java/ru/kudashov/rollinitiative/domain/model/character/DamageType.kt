@@ -1,4 +1,4 @@
-package ru.kudashov.rollinitiative.domain
+package ru.kudashov.rollinitiative.domain.model.character
 
 enum class DamageType {
     Slashing,

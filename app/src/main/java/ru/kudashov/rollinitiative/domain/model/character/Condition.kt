@@ -1,4 +1,4 @@
-package ru.kudashov.rollinitiative.domain.character
+package ru.kudashov.rollinitiative.domain.model.character
 
 sealed class Condition {
     data object Unconscious: Condition()

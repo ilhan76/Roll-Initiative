@@ -1,4 +1,4 @@
-package ru.kudashov.rollinitiative.domain.character
+package ru.kudashov.rollinitiative.domain.model.character
 
 abstract class Character {
     abstract val id: Int

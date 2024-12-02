@@ -1,7 +1,7 @@
-package ru.kudashov.rollinitiative.domain.character
+package ru.kudashov.rollinitiative.domain.model.character
 
-import ru.kudashov.rollinitiative.domain.Dice
-import ru.kudashov.rollinitiative.domain.roll
+import ru.kudashov.rollinitiative.domain.model.Dice
+import ru.kudashov.rollinitiative.domain.model.roll
 
 data class HitPoint(
     val dice: Dice,
