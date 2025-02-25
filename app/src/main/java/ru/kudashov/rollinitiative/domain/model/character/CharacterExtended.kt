@@ -10,7 +10,7 @@ data class CharacterExtended(
     val race: Race,
     val maxHP: HitPoint,
     val speed: Speed,
-    val characteristics: Characteristic,
+    val characteristics: Characteristics,
     val saveThrowProficiency: List<Characteristic>,
     val skillProficiency: List<Skill>,
     val damageImmunity: List<DamageType>,

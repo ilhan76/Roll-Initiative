@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.dp
  */
 @Immutable
 data class UiKitSpacings(
+    val xxxSmall: Dp,
     val xxSmall: Dp,
     val xSmall: Dp,
     val small: Dp,
@@ -31,9 +32,10 @@ fun getUiKitSpacings(): UiKitSpacings {
 
 private fun createUiKitSpacings(): UiKitSpacings {
     return UiKitSpacings(
-        xxSmall = 2.dp,
+        xxxSmall = 2.dp,
+        xxSmall = 4.dp,
         xSmall = 4.dp,
-        small = 8.dp,
+        small = 10.dp,
         medium = 12.dp,
         large = 16.dp,
         xLarge = 20.dp,

@@ -16,4 +16,11 @@
     <string name="undead">Нежить</string>
     <string name="slime">Слизь</string>
     <string name="pack_of_tiny_beasts">Стая крошечных зверей</string>
+
+    <!-- Create actor screen -->
+    <string name="create_actor_simple_mode_text">Simple mode</string>
+    <string name="create_actor_extended_mode_text">Упрощенный режим</string>
+    <string name="create_actor_avatar_title_text">Аватар</string>
+    <string name="create_actor_choose_from_gallery_text">Выбрать из галереии</string>
+    <string name="create_actor_upload_url_text">Загрузить URL</string>
 </resources>

@@ -41,7 +41,7 @@ fun Search(
         leadingIcon = {
             Icon(
                 imageVector = UiKitIcons.Search,
-                tint = UiKitTheme.colors.textColorSecondary,
+                tint = UiKitTheme.colors.textColorPrimaryWithAlpha,
                 contentDescription = null,
                 modifier = Modifier.padding(start = UiKitTheme.spacings.medium)
             )
@@ -50,7 +50,7 @@ fun Search(
             Text(
                 text = "Let's find some beast",
                 style = UiKitTheme.typography.subtitle1,
-                color = UiKitTheme.colors.textColorSecondary
+                color = UiKitTheme.colors.textColorPrimaryWithAlpha
             )
         },
         shape = RoundedCornerShape(15.dp),

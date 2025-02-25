@@ -1,4 +1,6 @@
 <resources>
+    <string name="app_name">Roll Initiative</string>
+
     <string name="aberration">Aberration</string>
     <string name="beast">Beast</string>
     <string name="celestial">Celestial</string>
@@ -14,4 +16,11 @@
     <string name="undead">Undead</string>
     <string name="slime">Slime</string>
     <string name="pack_of_tiny_beasts">Pack of tiny beasts</string>
+
+    <!-- Create actor screen -->
+    <string name="create_actor_simple_mode_text">Simple mode</string>
+    <string name="create_actor_extended_mode_text">Extended mode</string>
+    <string name="create_actor_avatar_title_text">Avatar</string>
+    <string name="create_actor_choose_from_gallery_text">Choose from gallery</string>
+    <string name="create_actor_upload_url_text">Upload URL</string>
 </resources>
