@@ -15,13 +15,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 
 
 @Composable
-fun BackButton(onClick: () -> Unit) {
+fun BackButton(modifier: Modifier = Modifier, onClick: () -> Unit) {
     Box(
         contentAlignment = Alignment.Center,
-        modifier = Modifier
+            modifier = modifier
             .size(44.dp)
             .clip(CircleShape)
             .background(Color(0xFFF5E6C8))
@@ -34,4 +35,12 @@ fun BackButton(onClick: () -> Unit) {
             modifier = Modifier.size(24.dp)
         )
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun BackButtonPreview(){
+    BackButton(
+        onClick = {}
+    )
 }

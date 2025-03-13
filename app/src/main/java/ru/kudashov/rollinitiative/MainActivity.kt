@@ -11,6 +11,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.Modifier
 import ru.kudashov.rollinitiative.screen.actors_list.ActorsListScreen
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
+import ru.kudashov.rollinitiative.screen.create_actor.items.DeleteButton
+import ru.kudashov.rollinitiative.screen.create_actor.items.BackButton
+import ru.kudashov.rollinitiative.screen.create_actor.items.ShowButton
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +35,7 @@ class MainActivity : ComponentActivity() {
                 Box(Modifier.background(color = UiKitTheme.colors.background)) {
                     ActorsListScreen()
                 }
+                ShowButton()
             }
         }
     }
