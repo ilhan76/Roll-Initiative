@@ -6,5 +6,5 @@ internal data class DeleteButtonPreviewInfo(
     val useDarkMode: Boolean,
     val size: IntButtonSize,
     val isEnabled: Boolean = true,
-    val appearance:
+    val appearance: IntButtonSize
 )

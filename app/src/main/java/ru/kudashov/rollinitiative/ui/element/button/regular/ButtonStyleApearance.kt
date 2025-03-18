@@ -14,7 +14,7 @@ object ButtonStyleAppearances{
     val Medium = ButtonSizeMedium()
 }
 
-interface IntButtonSize : UiKitSize{
+interface IntButtonSize : UiKitSize, IntButtonAppearance {
     val size: @Composable () -> DpSize
     val  roundedCornerShape: @Composable () -> Dp
 }
