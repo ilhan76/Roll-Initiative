@@ -15,12 +15,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import ru.kudashov.rollinitiative.R
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 import ru.kudashov.rollinitiative.ui.element.button.regular.preview.DeleteButtonPreviewInfo
 import ru.kudashov.rollinitiative.ui.element.button.regular.preview.DeleteButtonPreviewParameterProvider
@@ -30,16 +29,18 @@ fun DeleteButton(
     modifier: Modifier = Modifier,
     appearance: IntButtonAppearance,
     size: IntButtonSize = ButtonStyleAppearances.Medium,
-    roundedCornerShape: IntButtonSize = ButtonStyleAppearances.Medium,
     isEnabled: Boolean = true,
+    text: String = stringResource(id = R.string.delete_button),
     onClick: () -> Unit,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
+    val cornerRadius = size.roundedCornerShape()
+    val textStyle = size.textStyle()
     Box(
         modifier = modifier
             .size(size = size.size())
-            .clip(RoundedCornerShape(roundedCornerShape.roundedCornerShape()))
+            .clip(RoundedCornerShape((cornerRadius)))
             .background(
                 color = appearance.backgroundColor(isPressed),
             )
@@ -49,12 +50,11 @@ fun DeleteButton(
                 enabled = isEnabled,
                 onClick = onClick
             ),
+        contentAlignment = Alignment.Center
     ) {
         Text(
-            text = "Удалить",
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color(0xFF3E332A)
+            text = text,
+            style = textStyle,
         )
     }
 }
