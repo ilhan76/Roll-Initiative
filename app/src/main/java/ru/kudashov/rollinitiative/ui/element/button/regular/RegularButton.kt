@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -21,14 +22,14 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import ru.kudashov.rollinitiative.R
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
-import ru.kudashov.rollinitiative.ui.element.button.regular.preview.DeleteButtonPreviewInfo
-import ru.kudashov.rollinitiative.ui.element.button.regular.preview.DeleteButtonPreviewParameterProvider
+import ru.kudashov.rollinitiative.ui.element.button.regular.preview.RegularButtonPreviewInfo
+import ru.kudashov.rollinitiative.ui.element.button.regular.preview.RegularButtonPreviewParameterProvider
 
 @Composable
-fun DeleteButton(
+fun RegularButton(
     modifier: Modifier = Modifier,
-    appearance: IntButtonAppearance,
-    size: IntButtonSize = ButtonStyleAppearances.Medium,
+    appearance: RegularButtonAppearance = RegularButtonAppearances.Primary,
+    size: RegularButtonSize = RegularButtonSizes.Medium,
     isEnabled: Boolean = true,
     text: String = stringResource(id = R.string.delete_button),
     onClick: () -> Unit,
@@ -39,6 +40,7 @@ fun DeleteButton(
     val textStyle = size.textStyle()
     Box(
         modifier = modifier
+            .fillMaxWidth()
             .size(size = size.size())
             .clip(RoundedCornerShape((cornerRadius)))
             .background(
@@ -64,7 +66,7 @@ fun DeleteButton(
 @Preview
 @Composable
 private fun DeleteButtonPreview(
-    @PreviewParameter(DeleteButtonPreviewParameterProvider::class) info: DeleteButtonPreviewInfo
+    @PreviewParameter(RegularButtonPreviewParameterProvider::class) info: RegularButtonPreviewInfo
 ) {
     UiKitTheme(darkTheme = info.useDarkMode){
         Box(
@@ -73,7 +75,7 @@ private fun DeleteButtonPreview(
                 .padding(10.dp),
             contentAlignment = Alignment.Center
         ) {
-            DeleteButton(
+            RegularButton(
                 size = info.size,
                 isEnabled = info.isEnabled,
                 appearance = info.appearance
