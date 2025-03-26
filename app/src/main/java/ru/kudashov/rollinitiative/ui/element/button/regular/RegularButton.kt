@@ -4,7 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -32,17 +31,16 @@ fun RegularButton(
     size: RegularButtonSize = RegularButtonSizes.Medium,
     isEnabled: Boolean = true,
     text: String = stringResource(id = R.string.delete_button),
-    onClick: () -> Unit,
+    onClick: () -> Unit = {}
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
-    val cornerRadius = size.roundedCornerShape()
     val textStyle = size.textStyle()
     Box(
         modifier = modifier
             .fillMaxWidth()
             .size(size = size.size())
-            .clip(RoundedCornerShape((cornerRadius)))
+            .clip(size.shape())
             .background(
                 color = appearance.backgroundColor(isPressed),
             )
