@@ -15,13 +15,13 @@ object RegularButtonSizes {
 }
 
 interface RegularButtonSize : UiKitSize {
-    val size: @Composable () -> Dp
+    val height: @Composable () -> Dp
     val shape: @Composable () -> Shape
     val textStyle: @Composable () -> TextStyle
 }
 
 data class RegularButtonSizeSmall(
-    override val size: @Composable () -> Dp = { 37.dp},
+    override val height: @Composable () -> Dp = { 37.dp},
     override val shape: @Composable () -> Shape = { RoundedCornerShape(15.dp) },
     override val textStyle: @Composable () -> TextStyle = {
         UiKitTheme.typography.button2
@@ -29,7 +29,7 @@ data class RegularButtonSizeSmall(
 ): RegularButtonSize
 
 data class RegularButtonSizeBig(
-    override val size: @Composable () -> Dp = { 53.dp },
+    override val height: @Composable () -> Dp = { 53.dp },
     override val shape: @Composable () -> Shape = { RoundedCornerShape(15.dp) },
     override val textStyle: @Composable () -> TextStyle = {
         UiKitTheme.typography.button
