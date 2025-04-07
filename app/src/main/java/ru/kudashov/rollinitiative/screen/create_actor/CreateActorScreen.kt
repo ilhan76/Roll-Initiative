@@ -29,6 +29,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import ru.kudashov.rollinitiative.screen.create_actor.data.ActorType
 import ru.kudashov.rollinitiative.screen.create_actor.data.CreationMode
 import ru.kudashov.rollinitiative.ui.icons.ArrowBack
+import ru.kudashov.rollinitiative.ui.theme.UiKitIcons
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 import ru.surfstudio.mvi.vm.compose.renders
 
@@ -99,7 +100,7 @@ fun Toolbar(
             )
     ) {
         Image(
-            imageVector = ArrowBack,
+            imageVector = UiKitIcons.ArrowBack,
             contentDescription = null,
             alignment = Alignment.CenterStart,
             modifier = Modifier.clickable(onClick = onBackClick),
