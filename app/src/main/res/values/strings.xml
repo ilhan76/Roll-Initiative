@@ -23,4 +23,29 @@
     <string name="create_actor_avatar_title_text">Аватар</string>
     <string name="create_actor_choose_from_gallery_text">Выбрать из галереии</string>
     <string name="create_actor_upload_url_text">Загрузить URL</string>
+
+    <!-- Conditions -->
+    <string name="condition_unconscious">Бессознательный</string>
+    <string name="condition_invisible">Невидимый</string>
+    <string name="condition_petrified">Окаменевший</string>
+    <string name="condition_poisoned">Отравленный</string>
+    <string name="condition_paralyzed">Парализованный</string>
+    <string name="condition_frightened">Напуганный</string>
+    <string name="condition_incapacitated">Недееспособный</string>
+    <string name="condition_restrained">Опутанный</string>
+    <string name="condition_charmed">Очарованный</string>
+    <string name="condition_prone">Сбитый с ног</string>
+    <string name="condition_exhaustion">Истощённый</string>
+    <string name="condition_deafened">Оглохший</string>
+    <string name="condition_blinded">Ослеплённый</string>
+    <string name="condition_stunned">Ошеломлённый</string>
+    <string name="condition_grappled">Схваченный</string>
+    <string name="condition_insane">Безумный</string>
+    <string name="condition_concentrated">Сконцентрированный</string>
+    <string name="condition_surprised">Захваченный врасплох</string>
+    <string name="condition_stabilized">Стабилизированный</string>
+    <string name="condition_intoxicated">Опьяненный</string>
+    <string name="condition_dodging">Уклоняющийся</string>
+    <string name="condition_penalty_for_saving_throw">Штраф к спасброску</string>
+    <string name="condition_penalty_for_hitting">Штраф к попаданию</string>
 </resources>

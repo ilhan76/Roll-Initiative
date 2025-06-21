@@ -8,6 +8,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import ru.kudashov.rollinitiative.ui.element.base.UiKitAppearance
 import ru.kudashov.rollinitiative.ui.icons.AddSmall
 import ru.kudashov.rollinitiative.ui.icons.ArrowBack
+import ru.kudashov.rollinitiative.ui.icons.Cross
 import ru.kudashov.rollinitiative.ui.theme.UiKitIcons
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 
@@ -16,11 +17,14 @@ import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
  */
 object IconButtonAppearances {
 
-    val Back = IconButtonAppearanceRegular(
+    val Back = IconButtonAppearancePrimary(
         icon = { UiKitIcons.ArrowBack }
     )
-    val AddSmall = IconButtonAppearanceRegular(
+    val AddSmall = IconButtonAppearancePrimary(
         icon = { UiKitIcons.AddSmall }
+    )
+    val Cross = IconButtonAppearanceSecondary(
+        icon = { UiKitIcons.Cross }
     )
 }
 
@@ -31,11 +35,24 @@ interface IconButtonAppearance : UiKitAppearance {
     val icon: @Composable () -> ImageVector
 }
 
-data class IconButtonAppearanceRegular(
+data class IconButtonAppearancePrimary(
     override val backgroundColor: @Composable (isPressed: Boolean) -> Color = { isPressed ->
         when {
             isPressed -> UiKitTheme.colors.primary
             else -> UiKitTheme.colors.primary.copy(alpha = 0.8f)
+        }
+    },
+    override val backgroundShape: @Composable (
+        IconButtonSize,
+    ) -> Shape = { size -> RoundedCornerShape(size.cornerRadius()) },
+    override val icon: @Composable () -> ImageVector,
+) : IconButtonAppearance
+
+data class IconButtonAppearanceSecondary(
+    override val backgroundColor: @Composable (isPressed: Boolean) -> Color = { isPressed ->
+        when {
+            isPressed -> UiKitTheme.colors.secondary
+            else -> UiKitTheme.colors.secondary.copy(alpha = 0.8f)
         }
     },
     override val backgroundShape: @Composable (

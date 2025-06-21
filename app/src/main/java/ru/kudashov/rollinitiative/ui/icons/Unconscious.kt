@@ -9,27 +9,27 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import ru.kudashov.rollinitiative.ui.theme.UiKitIcons
 
-val UiKitIcons.Asleep: ImageVector by lazy(LazyThreadSafetyMode.NONE) {
+val UiKitIcons.Unconscious: ImageVector by lazy(LazyThreadSafetyMode.NONE) {
     ImageVector.Builder(
-        name = "asleep",
+        name = "Unconscious",
         defaultWidth = 30.dp,
         defaultHeight = 30.dp,
         viewportWidth = 30f,
         viewportHeight = 30f
     ).apply {
         path(
-            stroke = SolidColor(Color(0xFFfae9d5)),
+            stroke = SolidColor(Color(0xFFFAE9D5)),
             strokeLineWidth = 2f,
             strokeLineCap = StrokeCap.Round,
             strokeLineJoin = StrokeJoin.Round
         ) {
             moveTo(4.375f, 3.75f)
-            horizontalLineTo(15.0893f)
+            horizontalLineTo(15.089f)
             lineTo(4.375f, 15f)
             horizontalLineTo(15.625f)
         }
         path(
-            stroke = SolidColor(Color(0xFFfae9d5)),
+            stroke = SolidColor(Color(0xFFFAE9D5)),
             strokeLineWidth = 2f,
             strokeLineCap = StrokeCap.Round,
             strokeLineJoin = StrokeJoin.Round
@@ -40,13 +40,13 @@ val UiKitIcons.Asleep: ImageVector by lazy(LazyThreadSafetyMode.NONE) {
             horizontalLineTo(25.625f)
         }
         path(
-            stroke = SolidColor(Color(0xFFfae9d5)),
+            stroke = SolidColor(Color(0xFFFAE9D5)),
             strokeLineWidth = 2f,
             strokeLineCap = StrokeCap.Round,
             strokeLineJoin = StrokeJoin.Round
         ) {
             moveTo(9.375f, 20f)
-            horizontalLineTo(15.0297f)
+            horizontalLineTo(15.03f)
             lineTo(9.375f, 26.25f)
             horizontalLineTo(15.625f)
         }

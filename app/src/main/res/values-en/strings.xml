@@ -23,4 +23,28 @@
     <string name="create_actor_avatar_title_text">Avatar</string>
     <string name="create_actor_choose_from_gallery_text">Choose from gallery</string>
     <string name="create_actor_upload_url_text">Upload URL</string>
+    <!-- Conditions -->
+    <string name="condition_unconscious">Unconscious</string>
+    <string name="condition_invisible">Invisible</string>
+    <string name="condition_petrified">Petrified</string>
+    <string name="condition_poisoned">Poisoned</string>
+    <string name="condition_paralyzed">Paralyzed</string>
+    <string name="condition_frightened">Frightened</string>
+    <string name="condition_incapacitated">Incapacitated</string>
+    <string name="condition_restrained">Restrained</string>
+    <string name="condition_charmed">Charmed</string>
+    <string name="condition_prone">Prone</string>
+    <string name="condition_exhaustion">Exhausted</string>
+    <string name="condition_deafened">Deafened</string>
+    <string name="condition_blinded">Blinded</string>
+    <string name="condition_stunned">Stunned</string>
+    <string name="condition_grappled">Grappled</string>
+    <string name="condition_insane">Insane</string>
+    <string name="condition_concentrated">Concentrated</string>
+    <string name="condition_surprised">Surprised</string>
+    <string name="condition_stabilized">Stabilized</string>
+    <string name="condition_intoxicated">Intoxicated</string>
+    <string name="condition_dodging">Dodging</string>
+    <string name="condition_penalty_for_saving_throw">Penalty for saving throw</string>
+    <string name="condition_penalty_for_hitting">Penalty for hitting</string>
 </resources>
