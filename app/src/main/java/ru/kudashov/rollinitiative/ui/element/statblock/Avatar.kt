@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 
-val Avatar: ImageVector
+val AvatarDefault: ImageVector
     get() {
         if (_Avatar != null) {
             return _Avatar!!
@@ -121,7 +121,7 @@ private var _Avatar: ImageVector? = null
 fun AvatarPreview(){
     UiKitTheme {
         Icon(
-            imageVector = Avatar,
+            imageVector = AvatarDefault,
             contentDescription = null,
             modifier = Modifier.size(48.dp),
             tint = Color.Unspecified

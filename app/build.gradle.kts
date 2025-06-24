@@ -53,6 +53,11 @@ android {
 
 dependencies {
 
+    implementation("io.coil-kt.coil3:coil-compose:3.2.0")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.2.0") // Only available on Android/JVM.
+    implementation("io.coil-kt.coil3:coil-network-ktor2:3.2.0")
+    implementation("io.coil-kt.coil3:coil-network-ktor3:3.2.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
