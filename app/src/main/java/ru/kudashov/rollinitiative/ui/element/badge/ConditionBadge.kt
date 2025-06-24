@@ -31,8 +31,8 @@ import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
  */
 @Composable
 fun ConditionBadge(
-    modifier: Modifier = Modifier,
     condition: Condition,
+    modifier: Modifier = Modifier,
     appearance: ConditionBadgeAppearance = ConditionBadgeAppearances.Default,
     size: ConditionBadgeSize = ConditionBadgeSizes.Medium,
     onClick: () -> Unit = {},
