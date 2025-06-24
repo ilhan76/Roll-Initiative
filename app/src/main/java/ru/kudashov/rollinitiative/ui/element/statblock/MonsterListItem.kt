@@ -1,3 +1,5 @@
+package ru.kudashov.rollinitiative.ui.element.statblock
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,8 +19,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import ru.kudashov.rollinitiative.ui.element.statblock.AvatarDefault
-import ru.kudashov.rollinitiative.ui.element.statblock.monsters
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 
 @Composable
@@ -75,7 +75,6 @@ fun MonsterListItem(
 fun MonsterListItemPreview(){
     UiKitTheme(darkTheme = false) {
         MonsterListItem(
-            monsters as Modifier,
             imageUrl = null,
             fallbackImage = AvatarDefault,
             titleText = "title",

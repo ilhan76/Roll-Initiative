@@ -3,11 +3,12 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
     namespace = "ru.kudashov.rollinitiative"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "ru.kudashov.rollinitiative"
@@ -53,10 +54,8 @@ android {
 
 dependencies {
 
-    implementation("io.coil-kt.coil3:coil-compose:3.2.0")
-    implementation("io.coil-kt.coil3:coil-network-okhttp:3.2.0") // Only available on Android/JVM.
-    implementation("io.coil-kt.coil3:coil-network-ktor2:3.2.0")
-    implementation("io.coil-kt.coil3:coil-network-ktor3:3.2.0")
+    implementation(libs.coil.compose)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
