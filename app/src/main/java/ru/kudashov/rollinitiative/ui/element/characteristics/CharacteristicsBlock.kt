@@ -33,7 +33,6 @@ fun StatCell(
         modifier = modifier
             .width(95.dp)
             .clip(cornerShape)
-            .border(1.dp, Color.Gray.copy(alpha = 0.2f), cornerShape)
             .background(bottomColor)
     ) {
         Box(
