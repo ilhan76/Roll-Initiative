@@ -32,7 +32,6 @@ fun MonsterListItem(
     val fallbackPainter = rememberVectorPainter(image = fallbackImage)
     Box(
         modifier = modifier
-            .padding(8.dp)
             .background(
                 color = UiKitTheme.colors.primary,
                 shape = RoundedCornerShape(15.dp)
@@ -54,7 +53,9 @@ fun MonsterListItem(
                 contentScale = ContentScale.Crop
             )
 
-            Column {
+            Column (
+                verticalArrangement = Arrangement.spacedBy(3.dp)
+            ) {
                 Text(
                     text = titleText,
                     style = UiKitTheme.typography.subtitle2,
