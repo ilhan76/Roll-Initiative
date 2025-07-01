@@ -1,5 +1,6 @@
 package ru.kudashov.rollinitiative.ui.element.characteristics
 
+import ru.kudashov.rollinitiative.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,17 +15,37 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Text
 import androidx.compose.ui.draw.clip
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
+import ru.kudashov.rollinitiative.domain.model.character.Characteristics
+import androidx.compose.ui.res.stringResource
 
 @Composable
-fun StatCell(
+fun CharacterStatCell(
     modifier: Modifier = Modifier,
-    title: String,
-    value: Int,
-    bonus: Int?
+    characteristics: Characteristics,
+    characteristicsValue: String,
 ) {
-    val topColor = UiKitTheme.colors.component2()
     val bottomColor = UiKitTheme.colors.component1()
     val cornerShape = RoundedCornerShape(15.dp)
+
+    val title = when(characteristicsValue) {
+        "strength" -> stringResource(id = R.string.strength)
+        "dexterity" -> stringResource(id = R.string.dexterity)
+        "constitution" -> stringResource(id = R.string.agility)
+        "intelligence" -> stringResource(id = R.string.intelligence)
+        "wisdom" -> stringResource(id = R.string.wisdom)
+        "charisma" -> stringResource(id = R.string.charisma)
+        else -> "Неизвестная характеристика"
+    }
+
+    val (value, bonus) = when (characteristicsValue) {
+        "strength" -> characteristics.strength to calculateBonus(characteristics.strength)
+        "dexterity" -> characteristics.dexterity to calculateBonus(characteristics.dexterity)
+        "constitution" -> characteristics.constitution to calculateBonus(characteristics.constitution)
+        "intelligence" -> characteristics.intelligence to calculateBonus(characteristics.intelligence)
+        "wisdom" -> characteristics.wisdom to calculateBonus(characteristics.wisdom)
+        "charisma" -> characteristics.charisma to calculateBonus(characteristics.charisma)
+        else -> Pair(0, null)
+    }
 
     Column(
         modifier = modifier
@@ -35,7 +56,7 @@ fun StatCell(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(topColor)
+                .background(UiKitTheme.colors.component2())
                 .padding(vertical = 4.dp),
             contentAlignment = Alignment.Center
         ) {
@@ -61,15 +82,27 @@ fun StatCell(
     }
 }
 
+private fun calculateBonus(value: Int): Int? {
+    return if (value >= 10) (value - 10) / 2 else null
+}
+
 @Preview
 @Composable
 fun CharacterStatCellPreview() {
     UiKitTheme(darkTheme = true) {
-        StatCell(
-            title = "СИЛ",
-            value = 1,
-            bonus = 1,
-            modifier = Modifier
+        val characteristics = Characteristics(
+            strength = 12,
+            dexterity = 8,
+            constitution = 3,
+            intelligence = 29,
+            wisdom = 0,
+            charisma = 899
+        )
+
+        CharacterStatCell(
+            modifier = Modifier,
+            characteristics = characteristics,
+            characteristicsValue = "strength"
         )
     }
 }

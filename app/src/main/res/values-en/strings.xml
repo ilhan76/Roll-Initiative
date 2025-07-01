@@ -25,4 +25,12 @@
     <string name="create_actor_upload_url_text">Upload URL</string>
 
     <string name="delete_button">Delete</string>
+
+    <!--    Characteristics-->
+    <string name="strength">Strength</string>
+    <string name="dexterity">Dexterity</string>
+    <string name="agility">Agility</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="wisdom">Wisdom</string>
+    <string name="charisma">Charisma</string>
 </resources>

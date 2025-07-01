@@ -21,8 +21,17 @@
     <string name="create_actor_simple_mode_text">Simple mode</string>
     <string name="create_actor_extended_mode_text">Упрощенный режим</string>
     <string name="create_actor_avatar_title_text">Аватар</string>
-    <string name="create_actor_choose_from_gallery_text">Выбрать из галереии</string>
+    <string name="create_actor_choose_from_gallery_text">Выбрать из галереи</string>
     <string name="create_actor_upload_url_text">Загрузить URL</string>
 
     <string name="delete_button">Удалить</string>
+
+    <!--    Characteristics-->
+    <string name="strength">Сила</string>
+    <string name="dexterity">Ловкость</string>
+    <string name="agility">Телосложение</string>
+    <string name="intelligence">Интеллект</string>
+    <string name="wisdom">Мудрость</string>
+    <string name="charisma">Харизма</string>
+
 </resources>
