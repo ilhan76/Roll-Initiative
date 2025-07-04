@@ -102,7 +102,7 @@ fun CharacterStatCellPreview() {
         CharacterStatCell(
             modifier = Modifier,
             characteristics = characteristics,
-            characteristicsValue = "strength"
+            characteristicsValue = "intelligence"
         )
     }
 }
