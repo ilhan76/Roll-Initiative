@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -32,7 +31,7 @@ fun ItemWithTitle(
         Row {
             Text(
                 text = title,
-                style = UiKitTheme.typography.button.copy(fontWeight = FontWeight(600)),
+                style = UiKitTheme.typography.text18sp.copy(fontWeight = FontWeight(600)),
                 color = UiKitTheme.colors.textColorSecondary,
             )
             if (isObligatory) {

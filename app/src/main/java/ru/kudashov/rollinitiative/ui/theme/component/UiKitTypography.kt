@@ -11,16 +11,16 @@ import ru.kudashov.rollinitiative.R
 
 @Immutable
 data class UiKitTypography(
-    val header1: TextStyle,
-    val header2: TextStyle,
-    val button: TextStyle,
-    val button2: TextStyle,
-    val subtitle1: TextStyle,
-    val subtitle2: TextStyle,
-    val body1: TextStyle,
-    val body2: TextStyle,
-    val caption1: TextStyle,
-    val caption2: TextStyle,
+    val text24sp: TextStyle,
+    val text20sp: TextStyle,
+    val text18sp: TextStyle,
+    val text13sp: TextStyle,
+    val text16sp: TextStyle,
+    val text16spSemiBold: TextStyle,
+    val text14sp: TextStyle,
+    val text14spMedium: TextStyle,
+    val text12sp: TextStyle,
+    val text12spMedium: TextStyle,
 )
 
 private var typography: UiKitTypography? = null
@@ -33,65 +33,65 @@ fun getUiKitTypography(): UiKitTypography {
 
 private fun createUiKitTypography(): UiKitTypography {
     return UiKitTypography(
-        header1 = TextStyle(
+        text24sp = TextStyle(
             fontSize = 24.sp,
             lineHeight = 28.sp,
             fontWeight = FontWeight(400),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
             letterSpacing = 0.1.sp
         ),
-        header2 = TextStyle(
+        text20sp = TextStyle(
             fontSize = 20.sp,
             lineHeight = 24.sp,
             fontWeight = FontWeight(400),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
-        button = TextStyle(
+        text18sp = TextStyle(
             fontSize = 18.sp,
             lineHeight = 22.sp,
             fontWeight = FontWeight(400),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
             letterSpacing = 0.1.sp
         ),
-        button2 = TextStyle(
+        text13sp = TextStyle(
             fontSize = 13.sp,
             lineHeight = 16.sp,
             fontWeight = FontWeight(400),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
             letterSpacing = 0.1.sp
         ),
-        subtitle1 = TextStyle(
+        text16sp = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
             fontWeight = FontWeight(400),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
             letterSpacing = 0.3.sp
         ),
-        subtitle2 = TextStyle(
+        text16spSemiBold = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
             fontWeight = FontWeight(600),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
-        body1 = TextStyle(
+        text14sp = TextStyle(
             fontSize = 14.sp,
             lineHeight = 18.sp,
             fontWeight = FontWeight(400),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
-        body2 = TextStyle(
+        text14spMedium = TextStyle(
             fontSize = 14.sp,
             lineHeight = 18.sp,
             fontWeight = FontWeight(500),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
-        caption1 = TextStyle(
+        text12sp = TextStyle(
             fontSize = 12.sp,
             lineHeight = 16.sp,
             fontWeight = FontWeight(400),
             fontFamily = Font(R.font.inter_regular).toFontFamily(),
         ),
-        caption2 = TextStyle(
+        text12spMedium = TextStyle(
             fontSize = 12.sp,
             lineHeight = 16.sp,
             fontWeight = FontWeight(500),

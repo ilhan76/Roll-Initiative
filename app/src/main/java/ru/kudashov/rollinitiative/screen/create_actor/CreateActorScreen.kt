@@ -116,7 +116,7 @@ fun Toolbar(
                 )
         ) {
             Text(
-                style = UiKitTheme.typography.caption1,
+                style = UiKitTheme.typography.text12sp,
                 text = stringResource(mode.textId),
                 color = UiKitTheme.colors.textColorPrimary,
                 modifier = Modifier
@@ -136,7 +136,7 @@ fun Toolbar(
                         text = {
                             Text(
                                 text = stringResource(textId),
-                                style = UiKitTheme.typography.caption1,
+                                style = UiKitTheme.typography.text12sp,
                                 color = UiKitTheme.colors.textColorPrimary,
                                 modifier = Modifier
                                     .fillMaxWidth()

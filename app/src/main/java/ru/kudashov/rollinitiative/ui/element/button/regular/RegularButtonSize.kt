@@ -21,17 +21,17 @@ interface RegularButtonSize : UiKitSize {
 }
 
 data class RegularButtonSizeSmall(
-    override val size: @Composable () -> Dp = { 37.dp},
+    override val size: @Composable () -> Dp = { 37.dp },
     override val shape: @Composable () -> Shape = { RoundedCornerShape(15.dp) },
     override val textStyle: @Composable () -> TextStyle = {
-        UiKitTheme.typography.button2
+        UiKitTheme.typography.text13sp
     }
-): RegularButtonSize
+) : RegularButtonSize
 
 data class RegularButtonSizeBig(
     override val size: @Composable () -> Dp = { 53.dp },
     override val shape: @Composable () -> Shape = { RoundedCornerShape(15.dp) },
     override val textStyle: @Composable () -> TextStyle = {
-        UiKitTheme.typography.button
+        UiKitTheme.typography.text18sp
     }
-): RegularButtonSize
+) : RegularButtonSize

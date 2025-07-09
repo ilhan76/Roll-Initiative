@@ -28,7 +28,7 @@ fun Search(
     OutlinedTextField(
         value = query,
         onValueChange = onValueChange,
-        textStyle = UiKitTheme.typography.subtitle1,
+        textStyle = UiKitTheme.typography.text16sp,
         colors = OutlinedTextFieldDefaults.colors().copy(
             focusedTextColor = UiKitTheme.colors.textColorPrimary,
             unfocusedTextColor = UiKitTheme.colors.textColorPrimary,
@@ -49,7 +49,7 @@ fun Search(
         placeholder = {
             Text(
                 text = "Let's find some beast",
-                style = UiKitTheme.typography.subtitle1,
+                style = UiKitTheme.typography.text16sp,
                 color = UiKitTheme.colors.textColorPrimaryWithAlpha
             )
         },
