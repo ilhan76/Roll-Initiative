@@ -27,11 +27,11 @@
     <string name="delete_button">Удалить</string>
 
     <!--    Characteristics-->
-    <string name="strength">Сила</string>
-    <string name="dexterity">Ловкость</string>
-    <string name="agility">Телосложение</string>
-    <string name="intelligence">Интеллект</string>
-    <string name="wisdom">Мудрость</string>
-    <string name="charisma">Харизма</string>
+    <string name="characteristic_strength_title_text_short">СИЛ</string>
+    <string name="characteristic_dexterity_title_text_short">ЛОВ</string>
+    <string name="characteristic_constitution_title_text_short">ТЕЛ</string>
+    <string name="characteristic_intelligence_title_text_short">ИНТ</string>
+    <string name="characteristic_wisdom_title_text_short">МДР</string>
+    <string name="characteristic_charisma_title_text_short">ХАР</string>
 
 </resources>

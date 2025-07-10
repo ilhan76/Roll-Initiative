@@ -1,6 +1,5 @@
 package ru.kudashov.rollinitiative.ui.element.characteristics
 
-import ru.kudashov.rollinitiative.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,41 +16,27 @@ import androidx.compose.ui.draw.clip
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 import ru.kudashov.rollinitiative.domain.model.character.Characteristics
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.PreviewParameter
+import ru.kudashov.rollinitiative.ktx.calculateBonus
+import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
 @Composable
 fun CharacterStatCell(
     modifier: Modifier = Modifier,
     characteristics: Characteristics,
-    characteristicsValue: String,
+    characteristicType: CharacteristicType
 ) {
-    val bottomColor = UiKitTheme.colors.component1()
     val cornerShape = RoundedCornerShape(15.dp)
+    val title = stringResource(id = characteristicType.labelRes)
+    val value = characteristicType.getValue(characteristics)
+    val bonus = calculateBonus(value)
 
-    val title = when(characteristicsValue) {
-        "strength" -> stringResource(id = R.string.strength)
-        "dexterity" -> stringResource(id = R.string.dexterity)
-        "constitution" -> stringResource(id = R.string.agility)
-        "intelligence" -> stringResource(id = R.string.intelligence)
-        "wisdom" -> stringResource(id = R.string.wisdom)
-        "charisma" -> stringResource(id = R.string.charisma)
-        else -> "Неизвестная характеристика"
-    }
 
-    val (value, bonus) = when (characteristicsValue) {
-        "strength" -> characteristics.strength to calculateBonus(characteristics.strength)
-        "dexterity" -> characteristics.dexterity to calculateBonus(characteristics.dexterity)
-        "constitution" -> characteristics.constitution to calculateBonus(characteristics.constitution)
-        "intelligence" -> characteristics.intelligence to calculateBonus(characteristics.intelligence)
-        "wisdom" -> characteristics.wisdom to calculateBonus(characteristics.wisdom)
-        "charisma" -> characteristics.charisma to calculateBonus(characteristics.charisma)
-        else -> Pair(0, null)
-    }
-
-    Column(
+        Column(
         modifier = modifier
             .fillMaxWidth()
             .clip(cornerShape)
-            .background(bottomColor)
+            .background(UiKitTheme.colors.component1())
     ) {
         Box(
             modifier = Modifier
@@ -82,27 +67,35 @@ fun CharacterStatCell(
     }
 }
 
-private fun calculateBonus(value: Int): Int? {
-    return if (value >= 10) (value - 10) / 2 else null
-}
 
-@Preview
-@Composable
-fun CharacterStatCellPreview() {
-    UiKitTheme(darkTheme = true) {
-        val characteristics = Characteristics(
+
+
+class CharPreviewProvider : PreviewParameterProvider<Characteristics>{
+    override val values = sequenceOf(
+        Characteristics(
             strength = 12,
             dexterity = 8,
             constitution = 3,
             intelligence = 29,
             wisdom = 0,
-            charisma = 899
+            charisma = -5
         )
+    )
+}
+
+@Preview
+@Composable
+fun CharacterStatCellPreview(
+    @PreviewParameter(CharPreviewProvider::class) previewData: Characteristics
+
+) {
+    UiKitTheme(darkTheme = true) {
+        val characteristics = previewData
 
         CharacterStatCell(
             modifier = Modifier,
             characteristics = characteristics,
-            characteristicsValue = "strength"
+            characteristicType = CharacteristicType.CONSTITUTION,
         )
     }
 }
