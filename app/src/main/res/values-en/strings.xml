@@ -23,4 +23,6 @@
     <string name="create_actor_avatar_title_text">Avatar</string>
     <string name="create_actor_choose_from_gallery_text">Choose from gallery</string>
     <string name="create_actor_upload_url_text">Upload URL</string>
+
+    <string name="delete_button">Delete</string>
 </resources>

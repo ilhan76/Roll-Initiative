@@ -10,7 +10,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.Modifier
 import dagger.hilt.android.AndroidEntryPoint
-import ru.kudashov.rollinitiative.screen.actors_list.ActorsListScreen
 import ru.kudashov.rollinitiative.screen.create_actor.CreateActorScreen
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 
@@ -35,6 +34,7 @@ class MainActivity : ComponentActivity() {
                 Box(Modifier.background(color = UiKitTheme.colors.background)) {
                     CreateActorScreen()
                 }
+
             }
         }
     }
