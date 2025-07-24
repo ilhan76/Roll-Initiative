@@ -15,22 +15,35 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.draw.clip
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 import ru.kudashov.rollinitiative.domain.model.character.Characteristics
-import androidx.compose.ui.res.stringResource
+import ru.kudashov.rollinitiative.domain.model.character.Characteristic
+import ru.kudashov.rollinitiative.domain.model.character.Characteristic.*
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import ru.kudashov.rollinitiative.ktx.calculateBonus
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
+
+
+fun Characteristic.getValue(characteristics: Characteristics): Int{
+    return when(this) {
+         Strength -> characteristics.strength
+         Dexterity -> characteristics.dexterity
+         Constitution -> characteristics.constitution
+         Intelligence -> characteristics.intelligence
+         Wisdom -> characteristics.wisdom
+         Charisma -> characteristics.charisma
+    }
+}
+
 @Composable
 fun CharacterStatCell(
     modifier: Modifier = Modifier,
-    characteristics: Characteristics,
-    characteristicType: CharacteristicType
+    characteristic: Characteristic,
+    characteristics: Characteristics
 ) {
     val cornerShape = RoundedCornerShape(15.dp)
-    val title = stringResource(id = characteristicType.labelRes)
-    val value = characteristicType.getValue(characteristics)
+    val title = characteristic.name
+    val value = characteristic.getValue(characteristics)
     val bonus = calculateBonus(value)
-
 
         Column(
         modifier = modifier
@@ -89,13 +102,17 @@ fun CharacterStatCellPreview(
     @PreviewParameter(CharPreviewProvider::class) previewData: Characteristics
 
 ) {
+    Column (
+        modifier = Modifier.padding(16.dp)
+    ) {
     UiKitTheme(darkTheme = true) {
-        val characteristics = previewData
-
-        CharacterStatCell(
-            modifier = Modifier,
-            characteristics = characteristics,
-            characteristicType = CharacteristicType.CONSTITUTION,
-        )
+        entries.forEach { char ->
+            CharacterStatCell(
+                characteristic = char,
+                characteristics = previewData,
+                modifier = Modifier.padding(vertical = 4.dp)
+            )
+        }
+    }
     }
 }
