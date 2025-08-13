@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Roll Initiative</string>
+    
+    <string name="aberration">Аберрация</string>
+    <string name="beast">Зверь</string>
+    <string name="celestial">Небожитель</string>
+    <string name="construct">Конструкт</string>
+    <string name="dragon">Дракон</string>
+    <string name="elemental">Элементаль</string>
+    <string name="fairy">Фея</string>
+    <string name="fiend">Исчадие</string>
+    <string name="giant">Великан</string>
+    <string name="humanoid">Гуманоид</string>
+    <string name="monster">Монстр</string>
+    <string name="plant">Растение</string>
+    <string name="undead">Нежить</string>
+    <string name="slime">Слизь</string>
+    <string name="pack_of_tiny_beasts">Стая крошечных зверей</string>
+
+    <!-- Create actor screen -->
+    <string name="create_actor_simple_mode_text">Simple mode</string>
+    <string name="create_actor_extended_mode_text">Упрощенный режим</string>
+    <string name="create_actor_avatar_title_text">Аватар</string>
+    <string name="create_actor_choose_from_gallery_text">Выбрать из галереии</string>
+    <string name="create_actor_upload_url_text">Загрузить URL</string>
+
+    <string name="delete_button">Удалить</string>
 </resources>
