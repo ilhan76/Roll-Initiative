@@ -25,11 +25,11 @@ import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 
 @Composable
 fun RegularButton(
+    text: String,
     modifier: Modifier = Modifier,
     appearance: RegularButtonAppearance = RegularButtonAppearances.Primary,
     size: RegularButtonSize = RegularButtonSizes.Medium,
     isEnabled: Boolean = true,
-    text: String = stringResource(id = R.string.delete_button),
     onClick: () -> Unit = {}
 ) {
     val interactionSource = remember { MutableInteractionSource() }
@@ -75,7 +75,8 @@ private fun DeleteButtonPreview(
             RegularButton(
                 size = info.size,
                 isEnabled = info.isEnabled,
-                appearance = info.appearance
+                appearance = info.appearance,
+                text = stringResource(id = R.string.delete_button)
             ) { }
         }
     }
