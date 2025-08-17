@@ -9,7 +9,6 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
-        maven("https://artifactory.surfstudio.ru/artifactory/libs-release-local")
     }
 }
 dependencyResolutionManagement {
@@ -17,7 +16,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven("https://artifactory.surfstudio.ru/artifactory/libs-release-local")
     }
 }
 
