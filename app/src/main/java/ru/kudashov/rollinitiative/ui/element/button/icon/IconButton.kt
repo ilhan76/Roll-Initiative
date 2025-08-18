@@ -16,8 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import ru.kudashov.rollinitiative.ui.element.button.preview.IconButtonPreviewInfo
-import ru.kudashov.rollinitiative.ui.element.button.preview.IconButtonPreviewParameterProvider
+import ru.kudashov.rollinitiative.ui.element.button.icon.preview.IconButtonPreviewInfo
+import ru.kudashov.rollinitiative.ui.element.button.icon.preview.IconButtonPreviewParameterProvider
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
 
 /**

@@ -1,4 +1,4 @@
-package ru.kudashov.rollinitiative.ui.element.button.preview
+package ru.kudashov.rollinitiative.ui.element.button.icon.preview
 
 import ru.kudashov.rollinitiative.ui.element.button.icon.IconButton
 import ru.kudashov.rollinitiative.ui.element.button.icon.IconButtonAppearance
