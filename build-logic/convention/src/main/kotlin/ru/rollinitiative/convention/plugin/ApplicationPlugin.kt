@@ -4,10 +4,11 @@ import com.android.build.gradle.AppExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
+import ru.rollinitiative.convention.ktx.configureBuildTypes
 import ru.rollinitiative.convention.ktx.configureKotlinAndroid
 import ru.rollinitiative.convention.ktx.libs
 
-class ApplicationPlugin : Plugin<Project>{
+internal class ApplicationPlugin : Plugin<Project>{
 
     override fun apply(target: Project) {
         with(target) {
@@ -19,6 +20,7 @@ class ApplicationPlugin : Plugin<Project>{
             val appExtension = project.extensions.getByType<AppExtension>()
 
             configureKotlinAndroid(appExtension)
+            configureBuildTypes(appExtension)
         }
     }
 }
