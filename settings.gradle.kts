@@ -21,5 +21,11 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Roll Initiative"
+
 include(":app")
- 
+include(":core:model:data")
+include(":core:model:domain")
+include(":core-ui:compose:uikit")
+include(":feature:character:detail:api-logic")
+include(":feature:character:list:api-logic")
+include(":feature:main:impl-presentation")

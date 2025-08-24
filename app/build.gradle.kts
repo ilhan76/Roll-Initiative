@@ -1,7 +1,6 @@
 plugins {
     id("ru.rollinitiative.application.plugin")
     id("ru.rollinitiative.application.compose.plugin")
-    id("ru.rollinitiative.compose.plugin")
 }
 
 android {
@@ -16,4 +15,11 @@ android {
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    implementation(project(":core:model:domain"))
+    implementation(project(":core:model:data"))
+    implementation(project(":core-ui:compose:uikit"))
+
+    //feature
+    implementation(project(":feature:main:impl-presentation"))
 }
