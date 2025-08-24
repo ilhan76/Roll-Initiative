@@ -1,4 +1,4 @@
-package ru.rollinitiative.convention.library
+package ru.rollinitiative.convention.plugin.library
 
 import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Plugin
