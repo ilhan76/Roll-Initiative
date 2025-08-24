@@ -13,9 +13,9 @@ class FeatureImplPresentationPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("ru.rollinitiative.android.library.plugin")
                 apply("ru.rollinitiative.compose.plugin")
-//                apply("ru.rollinitiative.koin.plugin")
-//                apply("ru.rollinitiative.navigation.plugin")
-//                apply("ru.rollinitiative.coroutines.plugin")
+                apply("ru.rollinitiative.koin.plugin")
+                apply("ru.rollinitiative.navigation.plugin")
+                apply("ru.rollinitiative.coroutines.plugin")
             }
         }
     }

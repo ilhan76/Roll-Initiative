@@ -12,8 +12,9 @@ class FeatureImplLogicPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("ru.rollinitiative.android.library.plugin")
-//                apply("ru.rollinitiative.serialization.plugin")
-//                apply("ru.rollinitiative.coroutines.plugin")
+                apply("ru.rollinitiative.koin.plugin")
+                apply("ru.rollinitiative.serialization.plugin")
+                apply("ru.rollinitiative.coroutines.plugin")
             }
         }
     }

@@ -9,6 +9,6 @@ import org.gradle.api.Project
 internal class KoinPlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
-        // TODO: Implement Koin plugin configuration
+        // todo - https://app.weeek.net/ws/44958/task/969368
     }
 }
