@@ -1,4 +1,4 @@
-package ru.rollinitiative
+package ru.rollinitiative.feature.main.impl.presentation
 
 import android.graphics.Color
 import android.os.Bundle
@@ -11,18 +11,18 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.ui.Modifier
-import ru.rollinitiative.ui.theme.UiKitTheme
+import ru.rollinitiative.core.ui.compose.uikit.theme.UiKitTheme
 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.auto(
+            statusBarStyle = SystemBarStyle.Companion.auto(
                 lightScrim = Color.TRANSPARENT,
                 darkScrim = Color.TRANSPARENT
             ),
-            navigationBarStyle = SystemBarStyle.auto(
+            navigationBarStyle = SystemBarStyle.Companion.auto(
                 lightScrim = Color.argb(0xe6, 0xFF, 0xFF, 0xFF),
                 darkScrim = Color.argb(0x80, 0x1b, 0x1b, 0x1b),
             )

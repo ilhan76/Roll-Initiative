@@ -1,4 +1,4 @@
-package ru.rollinitiative.base
+package ru.rollinitiative
 
 import android.app.Application
 
