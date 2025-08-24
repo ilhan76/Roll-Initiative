@@ -1,4 +1,4 @@
-package ru.rollinitiative.convention.plugin
+package ru.rollinitiative.convention.plugin.application
 
 import com.android.build.gradle.AppExtension
 import org.gradle.api.Plugin
