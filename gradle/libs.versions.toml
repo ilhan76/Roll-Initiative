@@ -1,6 +1,14 @@
 [versions]
+versionName = "0.0.0"
+versionCode = "1"
+javaVersion = "17"
+minSdk = "28"
+targetSdk = "35"
+compileSdk = "36"
+
 agp = "8.9.3"
-kotlin = "2.0.21"
+kotlin = "2.1.10"
+compose = "1.6.10"
 coreKtx = "1.17.0"
 lifecycleRuntimeKtx = "2.9.2"
 activityCompose = "1.10.1"
@@ -8,6 +16,12 @@ composeBom = "2025.08.00"
 uiTooling = "1.9.0"
 
 [libraries]
+
+# Plugins for composite build
+gradle-plugin-android = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+gradle-plugin-composeCompiler = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -23,4 +37,3 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", vers
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
