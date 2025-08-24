@@ -5,10 +5,10 @@ plugins {
 }
 
 android {
-    namespace = "ru.kudashov.rollinitiative"
+    namespace = "ru.rollinitiative"
 
     defaultConfig {
-        applicationId = "ru.kudashov.rollinitiative"
+        applicationId = "ru.rollinitiative"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 }
