@@ -22,4 +22,8 @@ dependencies {
 
     //feature
     implementation(project(":feature:main:impl-presentation"))
+    implementation(project(":feature:character:details:impl-logic"))
+    implementation(project(":feature:character:details:impl-presentation"))
+    implementation(project(":feature:character:list:impl-logic"))
+    implementation(project(":feature:character:list:impl-presentation"))
 }

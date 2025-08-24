@@ -1,9 +1,9 @@
 plugins {
-    id("ru.rollinitiative.feature.api.logic.plugin")
+    id("ru.rollinitiative.feature.impl.logic.plugin")
 }
 
 android {
-    namespace = "ru.rollinitiative.feature.character.list.api.logic"
+    namespace = "ru.rollinitiative.feature.character.details.impl.logic"
 }
 
 dependencies {
