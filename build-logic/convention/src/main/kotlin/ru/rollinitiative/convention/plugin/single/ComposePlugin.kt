@@ -1,6 +1,6 @@
 package ru.rollinitiative.convention.plugin.single
 
-import com.android.build.api.dsl.ApplicationExtension
+import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
@@ -28,7 +28,7 @@ internal class ComposePlugin : Plugin<Project> {
                 implementation(libs.androidx.compose.ui.tooling.asProvider())
             }
 
-            configureComposeCommon(extensions.getByType<ApplicationExtension>())
+            configureComposeCommon(extensions.getByType<LibraryExtension>())
         }
     }
 }
