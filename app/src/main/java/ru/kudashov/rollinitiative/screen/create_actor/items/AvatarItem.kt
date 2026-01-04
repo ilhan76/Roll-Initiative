@@ -13,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import ru.kudashov.rollinitiative.R
 import ru.kudashov.rollinitiative.ui.theme.UiKitTheme
@@ -41,7 +40,7 @@ fun AvatarItem(
                 ) {
                     Text(
                         text = stringResource(R.string.create_actor_choose_from_gallery_text),
-                        style = UiKitTheme.typography.caption1,
+                        style = UiKitTheme.typography.text12sp,
                         color = UiKitTheme.colors.textColorSecondary,
                     )
                 }
@@ -58,7 +57,7 @@ fun AvatarItem(
                 ) {
                     Text(
                         text = stringResource(R.string.create_actor_upload_url_text),
-                        style = UiKitTheme.typography.caption1,
+                        style = UiKitTheme.typography.text12sp,
                         color = UiKitTheme.colors.textColorSecondary,
                     )
                 }

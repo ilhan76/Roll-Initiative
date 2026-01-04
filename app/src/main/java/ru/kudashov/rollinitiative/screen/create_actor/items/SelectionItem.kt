@@ -39,7 +39,7 @@ fun <T> SelectionItem(
                         label = {
                             Text(
                                 text = value.toString(),
-                                style = UiKitTheme.typography.caption2,
+                                style = UiKitTheme.typography.text12spMedium,
                                 color = UiKitTheme.colors.textColorPrimary,
                             )
                         },

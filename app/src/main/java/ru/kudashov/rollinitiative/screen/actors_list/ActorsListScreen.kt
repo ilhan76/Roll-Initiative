@@ -147,12 +147,12 @@ fun ActorItem(
         ) {
             Text(
                 text = actorUi.name,
-                style = UiKitTheme.typography.subtitle2,
+                style = UiKitTheme.typography.text16spSemiBold,
                 color = UiKitTheme.colors.textColorPrimary
             )
             Text(
                 text = stringResource(actorUi.type.getNameResource()),
-                style = UiKitTheme.typography.caption1,
+                style = UiKitTheme.typography.text12sp,
                 color = UiKitTheme.colors.textColorPrimaryWithAlpha
             )
         }

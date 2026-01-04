@@ -58,12 +58,12 @@ fun MonsterListItem(
             ) {
                 Text(
                     text = titleText,
-                    style = UiKitTheme.typography.subtitle2,
+                    style = UiKitTheme.typography.text16spSemiBold,
                     color = UiKitTheme.colors.textColorPrimary
                 )
                 Text(
                     text = subtitleText,
-                    style = UiKitTheme.typography.subtitle1,
+                    style = UiKitTheme.typography.text16sp,
                     color = UiKitTheme.colors.textColorPrimaryWithAlpha
                 )
             }
