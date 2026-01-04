@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
-import ru.rollinitiative.ui.theme.UiKitIcon
+import ru.rollinitiative.core.ui.compose.uikit.theme.UiKitIcon
 
 val UiKitIcon.ArrowBack: ImageVector by lazy {
     ImageVector.Builder(
