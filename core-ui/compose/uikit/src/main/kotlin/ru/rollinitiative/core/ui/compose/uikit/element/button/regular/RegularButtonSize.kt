@@ -1,0 +1,37 @@
+package ru.rollinitiative.core.ui.compose.uikit.element.button.regular
+
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+import ru.rollinitiative.core.ui.compose.uikit.element.base.UiKitSize
+import ru.rollinitiative.core.ui.compose.uikit.theme.UiKitTheme
+
+object RegularButtonSizes {
+    val Small = RegularButtonSizeSmall()
+    val Medium = RegularButtonSizeBig()
+}
+
+interface RegularButtonSize : UiKitSize {
+    val height: @Composable () -> Dp
+    val shape: @Composable () -> Shape
+    val textStyle: @Composable () -> TextStyle
+}
+
+data class RegularButtonSizeSmall(
+    override val height: @Composable () -> Dp = { 37.dp},
+    override val shape: @Composable () -> Shape = { RoundedCornerShape(15.dp) },
+    override val textStyle: @Composable () -> TextStyle = {
+        UiKitTheme.typography.button2
+    }
+): RegularButtonSize
+
+data class RegularButtonSizeBig(
+    override val height: @Composable () -> Dp = { 53.dp },
+    override val shape: @Composable () -> Shape = { RoundedCornerShape(15.dp) },
+    override val textStyle: @Composable () -> TextStyle = {
+        UiKitTheme.typography.button
+    }
+): RegularButtonSize
