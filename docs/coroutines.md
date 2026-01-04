@@ -1,7 +1,7 @@
 # Kotlin Coroutines
 
-- [6. Материалы](#6-материалы)
-    - [6.1. Exception handling:](#61-exception-handling)
+- [1. Материалы](#1-материалы)
+    - [1.1. Exception handling:](#11-exception-handling)
 
 TODO
     
@@ -18,7 +18,7 @@ TODO
 9. [Kotlin in Action, Second Edition](https://www.manning.com/books/kotlin-in-action-second-edition)
 10. [Курс от StartAndroid](https://startandroid.ru/ru/courses/kotlin.html)
 
-### 6.1. Exception handling:
+### 1.1. Exception handling:
 
 1. [Как я перестал волноваться и полюбил ошибки в Kotlin корутинах: Мифы обработки ошибок в корутинах](https://habr.com/ru/articles/747146/)
 2. [Как я перестал волноваться и полюбил ошибки в корутинах: поймай меня если сможешь](https://habr.com/ru/articles/827188/)
