@@ -7,34 +7,26 @@ import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
-import ru.rollinitiative.core.ui.compose.uikit.theme.UiKitIcons
+import ru.rollinitiative.core.ui.compose.uikit.theme.UiKitIcon
 
-val UiKitIcons.Add: ImageVector
-    get() {
-        if (vector != null) {
-            return vector!!
+val UiKitIcon.Add: ImageVector by lazy {
+    ImageVector.Builder(
+        name = "Add",
+        defaultWidth = 32.dp,
+        defaultHeight = 32.dp,
+        viewportWidth = 32f,
+        viewportHeight = 32f
+    ).apply {
+        path(
+            stroke = SolidColor(Color(0xFFFFFFFF)),
+            strokeLineWidth = 2f,
+            strokeLineCap = StrokeCap.Round,
+            strokeLineJoin = StrokeJoin.Round
+        ) {
+            moveTo(1.333f, 16f)
+            horizontalLineTo(30.667f)
+            moveTo(16f, 1.333f)
+            verticalLineTo(30.667f)
         }
-        vector = ImageVector.Builder(
-            name = "Vector 1",
-            defaultWidth = 32.dp,
-            defaultHeight = 32.dp,
-            viewportWidth = 32f,
-            viewportHeight = 32f
-        ).apply {
-            path(
-                stroke = SolidColor(Color(0xFFFFFFFF)),
-                strokeLineWidth = 2f,
-                strokeLineCap = StrokeCap.Round,
-                strokeLineJoin = StrokeJoin.Round
-            ) {
-                moveTo(1.333f, 16f)
-                horizontalLineTo(30.667f)
-                moveTo(16f, 1.333f)
-                verticalLineTo(30.667f)
-            }
-        }.build()
-
-        return vector!!
-    }
-
-private var vector: ImageVector? = null
+    }.build()
+}

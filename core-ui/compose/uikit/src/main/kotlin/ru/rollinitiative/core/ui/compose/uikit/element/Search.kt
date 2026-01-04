@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ru.rollinitiative.core.ui.compose.uikit.icons.Search
-import ru.rollinitiative.core.ui.compose.uikit.theme.UiKitIcons
+import ru.rollinitiative.core.ui.compose.uikit.theme.UiKitIcon
 import ru.rollinitiative.core.ui.compose.uikit.theme.UiKitTheme
 
 @Composable
@@ -40,7 +40,7 @@ fun Search(
         singleLine = true,
         leadingIcon = {
             Icon(
-                imageVector = UiKitIcons.Search,
+                imageVector = UiKitIcon.Search,
                 tint = UiKitTheme.colors.textColorPrimaryWithAlpha,
                 contentDescription = null,
                 modifier = Modifier.padding(start = UiKitTheme.spacings.medium)
