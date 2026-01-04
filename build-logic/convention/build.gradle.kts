@@ -44,6 +44,10 @@ gradlePlugin {
             id = "ru.rollinitiative.android.library.plugin"
             implementationClass = "ru.rollinitiative.convention.plugin.library.AndroidLibraryPlugin"
         }
+        register("ru.rollinitiative.java.library.plugin") {
+            id = "ru.rollinitiative.java.library.plugin"
+            implementationClass = "ru.rollinitiative.convention.plugin.library.JavaLibraryPlugin"
+        }
 
         // feature
         register("ru.rollinitiative.feature.api.logic.plugin") {
